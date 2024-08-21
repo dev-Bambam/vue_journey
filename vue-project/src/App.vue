@@ -53,7 +53,7 @@ nav a {
 }
 
 nav a:first-of-type {
-  border: 0;
+  border: 1;
 }
 
 @media (min-width: 1024px) {
