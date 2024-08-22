@@ -1,3 +1,18 @@
+<script setup>
+import { ref, computed } from 'vue'
+
+// Initial price
+const price = ref(100)
+
+// Discount percentage
+const discount = ref(0)
+
+// Computed property to automatically calculate discounted price
+const discountedPrice = computed(() => {
+  return price.value * (1 - discount.value / 100)
+})
+</script>
+
 <template>
   <div class="about">
     <div>
@@ -18,18 +33,3 @@
   }
 }
 </style>
-
-<script setup>
-import { ref, computed } from 'vue'
-
-// Initial price
-const price = ref(100)
-
-// Discount percentage
-const discount = ref(0)
-
-// Computed property to automatically calculate discounted price
-const discountedPrice = computed(() => {
-  return price.value * (1 - discount.value / 100)
-})
-</script>
